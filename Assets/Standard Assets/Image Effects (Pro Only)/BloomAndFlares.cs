@@ -98,7 +98,7 @@ public class BloomAndFlares : PostEffectsBase {
 
 		doHdr = false;
 		if (hdr == HDRBloomMode.Auto)
-			doHdr = source.format == RenderTextureFormat.ARGBHalf && GetComponent<Camera>().hdr;
+			doHdr = source.format == RenderTextureFormat.ARGBHalf && GetComponent<Camera>().allowHDR;
 		else {
 			doHdr = hdr == HDRBloomMode.On;
 		}
