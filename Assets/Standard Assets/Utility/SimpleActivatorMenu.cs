@@ -1,5 +1,8 @@
 using System;
 using UnityEngine;
+#if UNITY_2017_2_OR_NEWER
+using UnityEngine.UI;
+#endif
 
 namespace UnityStandardAssets.Utility
 {
@@ -7,7 +10,11 @@ namespace UnityStandardAssets.Utility
     {
         // An incredibly simple menu which, when given references
         // to gameobjects in the scene
+#if UNITY_2017_2_OR_NEWER
+        public Text camSwitchButton;
+#else
         public GUIText camSwitchButton;
+#endif
         public GameObject[] objects;
 
 
